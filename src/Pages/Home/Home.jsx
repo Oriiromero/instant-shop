@@ -89,7 +89,7 @@ const Home = () => {
             <div
               key={index}
               className="top-home_gal__box"
-              onClick={() => navigate(`/products/{product.id}`)}
+              onClick={() => navigate(`/products/${product.id}`)}
             >
               <div className="top-home_gal__box-img">
                 <img src={product.image} alt={product.id} />
