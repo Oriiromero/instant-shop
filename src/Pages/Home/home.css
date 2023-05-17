@@ -165,6 +165,89 @@
     color: black;
     background-color: #DEECFF;
   }
+  .top-home_gal {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background-color: #DEECFF;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding: 0 15px;
+    position: relative;
+  }
+  .top-home_gal__title {
+    font-family: "Allura", cursive;
+    font-weight: lighter;
+    position: absolute;
+    font-size: 30px;
+    top: 20px;
+    left: 35px;
+  }
+  .top-home_gal__box {
+    width: 350px;
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0 10px;
+    box-shadow: 1px 1px 8px 1px #ABC9FF;
+    cursor: pointer;
+  }
+  .top-home_gal__box-img {
+    width: 100px;
+    height: 150px;
+  }
+  .top-home_gal__box-img img {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+  }
+  .top-home_gal__box-title {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    width: 150px;
+    text-align: center;
+  }
+  .top-home_gal__box-price {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .top-home_gal__box-btn {
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+    top: 430px;
+    left: 48%;
+  }
+  .top-home_gal__box-btn .top-home_gal__box-img {
+    width: 15px;
+    height: 20px;
+  }
+  .top-home_gal__box-btn:hover {
+    color: black;
+    background-color: white;
+  }
 }
 @media ((min-width: 375px) and (max-width: 900px)) {
   .top-home {
@@ -276,5 +359,89 @@
   .top-home_introduction__btn:hover {
     color: black;
     background-color: #DEECFF;
+  }
+  .top-home_gal {
+    width: 80%;
+    height: 700px;
+    display: flex;
+    background-color: #DEECFF;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding: 20px 15px;
+    position: relative;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .top-home_gal__title {
+    font-family: "Allura", cursive;
+    font-weight: lighter;
+    position: absolute;
+    font-size: 30px;
+    top: 30px;
+    left: 35px;
+  }
+  .top-home_gal__box {
+    width: 150px;
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: white;
+    margin: 5px 10px;
+    box-shadow: 1px 1px 8px 1px #ABC9FF;
+    cursor: pointer;
+  }
+  .top-home_gal__box-img {
+    width: 100px;
+    height: 100px;
+  }
+  .top-home_gal__box-img img {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+  }
+  .top-home_gal__box-title {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 10px;
+    width: 150px;
+    text-align: center;
+  }
+  .top-home_gal__box-price {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .top-home_gal__box-btn {
+    background-color: black;
+    color: white;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    top: 670px;
+  }
+  .top-home_gal__box-btn img {
+    width: 15px;
+    height: 15px;
+  }
+  .top-home_gal__box-btn:hover {
+    color: black;
+    background-color: white;
   }
 }/*# sourceMappingURL=home.css.map */
