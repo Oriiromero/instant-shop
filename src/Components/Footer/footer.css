@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gothic+A1:wght@300;400;500&display=swap");
 @media ((min-width: 1200px) and (max-width: 1600px)) {
   .footer {
-    width: 100vw;
+    width: 100%;
     height: 200px;
     background-color: #f4e6e6;
   }
