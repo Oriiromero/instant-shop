@@ -8,10 +8,12 @@
     padding: 10px 30px;
     justify-content: space-between;
   }
+  .header .logo {
+    cursor: pointer;
+  }
   .header .logo-img {
     width: 98px;
     height: 62px;
-    cursor: pointer;
   }
   .header .links {
     width: 600px;
@@ -51,6 +53,8 @@
     align-items: center;
     padding: 0px 20px;
     background-color: #fff4f4;
+    z-index: 3;
+    justify-content: space-between;
   }
   .header .logo {
     width: 110px;
@@ -88,6 +92,7 @@
     align-items: flex-end;
     justify-content: space-between;
     cursor: pointer;
+    z-index: 2;
   }
   .header .links .burger-menu .burger-bar {
     width: 30px;
@@ -98,12 +103,11 @@
   }
   .header .menu {
     width: 50%;
-    height: 100vh;
-    background-color: #f4e6e6;
+    height: 100%;
+    background-color: rgba(244, 230, 230, 0.9176470588);
     position: absolute;
-    top: 0;
+    top: 100px;
     right: 0;
-    z-index: -1;
     transition: opacity 0.5s;
   }
   .header .menu .burger-links {

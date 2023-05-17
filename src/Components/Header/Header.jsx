@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './header.scss'
 
 const Header = () => {
@@ -7,6 +7,7 @@ const Header = () => {
   const [burger_class, setBurgerClass] = useState('burger-bar unclicked');
   const [menu_class, setMenuClass] = useState('menu hidden');
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const navigate = useNavigate();
 
   const updateMenu = () => {
     if(!isMenuClicked){
@@ -24,7 +25,7 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='logo'>
-        <img className='logo-img' src='/assets/logo.png' alt='logo' />
+        <img onClick={()=> navigate('/')} className='logo-img' src='/assets/logo.png' alt='logo' />
       </div>
       <div className='links'>
         <NavLink className='links-link' to='/'> Home </NavLink>

@@ -26,14 +26,16 @@ $breakpoints: (
         height: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        flex-direction: column;
+        align-items: center;
 
         &_news {
             width: 80%;
             height: 500px;
             display: flex;
             align-items: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
         }
 
         &_newin {
@@ -151,9 +153,59 @@ $breakpoints: (
                 position: relative;
             }
         }
-    }
 
-  
+        &_introduction {
+            width: 700px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+
+            &__title {
+                font-family: 'Allura', cursive;
+                font-size: 50px;
+                font-weight: lighter;
+                margin-bottom: 5px;
+            }
+
+            &__p {
+                font-family: 'Gothic A1', sans-serif; 
+                font-weight: 500;
+                font-size: 15px;
+                text-align: justify;
+                padding: 10px 15px;
+            }
+
+            &__btn {
+                background-color: black;
+                color: white;
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                padding: 10px;
+                display: flex;
+                border: none;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 0.5s;
+                margin-top: 15px;
+
+                img {
+                    width: 15px;
+                }
+            }
+
+            &__btn:hover {
+                color: black;
+                background-color: #DEECFF;
+           }
+        }
+    }  
 }
 
 @include breakpoint(small){
@@ -161,13 +213,15 @@ $breakpoints: (
         width: 100%;
         height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        align-items: center;
 
         &_news {
-            width: 70%;
+            width: 400px;
             height: 300px;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
         &_newin {
@@ -225,6 +279,58 @@ $breakpoints: (
 
         &_model {
             display: none;
+        }
+
+        &_introduction {
+            width: 400px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+
+            &__title {
+                font-family: 'Allura', cursive;
+                font-size: 30px;
+                font-weight: lighter;
+                margin-bottom: 5px;
+            }
+
+            &__p {
+                font-family: 'Gothic A1', sans-serif; 
+                font-weight: 500;
+                font-size: 12px;
+                text-align: justify;
+                padding: 10px 15px;
+            }
+
+            &__btn {
+                background-color: black;
+                color: white;
+                font-family: "Gothic A1", sans-serif;
+                font-size: 10px;
+                font-weight: 500;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                padding: 10px;
+                display: flex;
+                border: none;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: 0.5s;
+                margin-top: 15px;
+
+                img {
+                    width: 15px;
+                }
+            }
+
+            &__btn:hover {
+                color: black;
+                background-color: #DEECFF;
+           }
         }
     }
 
