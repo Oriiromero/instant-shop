@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap');
+
+$breakpoints: (
+    "small": "(min-width: 375px) and (max-width: 900px)",
+    "medium": "(min-width: 900px) and (max-width: 1200px)",
+    "large": "(min-width: 1200px) and (max-width: 1600px)",
+);
+
+@mixin breakpoint($user-value) {
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map 
+    {
+        @media (#{$my-map}) {
+            @content;
+        }
+    }
+    @else 
+    {
+        @error 'Oops, #{$user-value} is not defined'
+    }
+};
+
+
+@include breakpoint(large){
+    .gallery {
+        width: 95%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px 0;
+
+        &-product {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgb(220, 219, 219);
+            margin: 15px;
+            padding: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            &_img {
+                width: 150px;
+                height: 180px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &_title {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                text-align: center;
+                font-weight: bolder;
+            }
+
+            &_price {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            &_btn {
+                width: 80px;
+                height: 25px;
+                background-color: black;
+                color: white;
+                font-family: "Gothic A1", sans-serif;
+                font-weight: bolder;
+                letter-spacing: 0.8px;
+                font-size: 11px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border: none;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            &_btn:hover {
+                border: 0.5px solid #c6ddfa;
+                background-color: #DEECFF;
+                color: black;
+            }
+        }
+
+        &-btn {
+            margin-top: 25px;
+            width: 180px;
+            height: 45px;
+            background-color: #DEECFF;
+            color: black;
+            font-family: "Gothic A1", sans-serif;
+            font-weight: bolder;
+            letter-spacing: 0.8px;
+            font-size: 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        &-btn:hover {
+            background-color: #b8d3f9;
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+}
+
+@include breakpoint(small){
+    .gallery {
+        width: 95%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px 0;
+
+        &-product {
+            width: 200px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgb(220, 219, 219);
+            margin: 15px;
+            padding: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            &_img {
+                width: 150px;
+                height: 180px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &_title {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                text-align: center;
+                font-weight: bolder;
+            }
+
+            &_price {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                text-align: center;
+                font-weight: 500;
+            }
+
+            &_btn {
+                width: 80px;
+                height: 25px;
+                background-color: black;
+                color: white;
+                font-family: "Gothic A1", sans-serif;
+                font-weight: bolder;
+                letter-spacing: 0.8px;
+                font-size: 11px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border: none;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            &_btn:hover {
+                border: 0.5px solid #c6ddfa;
+                background-color: #DEECFF;
+                color: black;
+            }
+        }
+
+        &-btn {
+            margin-top: 25px;
+            width: 180px;
+            height: 45px;
+            background-color: #DEECFF;
+            color: black;
+            font-family: "Gothic A1", sans-serif;
+            font-weight: bolder;
+            letter-spacing: 0.8px;
+            font-size: 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        &-btn:hover {
+            background-color: #b8d3f9;
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+}
