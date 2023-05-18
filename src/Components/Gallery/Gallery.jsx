@@ -1,40 +1,48 @@
-import React, { useEffect, useState } from 'react';
-import './gallery.scss';
+import "./gallery.scss";
+import axios from "axios";
 
-const Gallery = ({products, setNumLimit, numLimit}) => {
+const Gallery = ({ products, setNumLimit, numLimit, url, api, btnClass, setBtnClass}) => {
+  const showMoreNum = 5;
 
-  const [btnClass, setBtnClass] = useState('gallery-btn')
+  const showMore = async () => {
 
-  const showMore = () => {
-    if(numLimit <= 16){
-      setNumLimit(numLimit + 4);
-    } 
-  }
-
-  useEffect(()=>{
-    if(numLimit === 20){
-      setBtnClass('gallery-btn hidden')
-    }
-  }, [numLimit]);
-  
+   axios.get(api).then((res) => {
+      if (res.status === 200) {
+        if (numLimit <= res.data.length - showMoreNum) {
+          setNumLimit(numLimit + showMoreNum);
+        }
+        else if (res.data.length - numLimit < showMoreNum){
+          setNumLimit(numLimit + (res.data.length - numLimit));
+        }
+        else if (res.data.length === numLimit ){
+          setBtnClass("gallery-btn hidden");
+        }
+      }
+    });
+    
+    console.log(numLimit, showMoreNum);
+  }; 
 
   return (
-    <div className='gallery'>
-      {products.map((product, index)=> {
+    <div className="gallery">
+      {products.map((product, index) => {
         return (
-          <div className='gallery-product' key={index}>
-            <div className='gallery-product_img'>
+          <div className="gallery-product" key={index}>
+            <div className="gallery-product_img">
               <img src={product.image} alt={product.title} />
             </div>
-            <h3 className='gallery-product_title'>{product.title}</h3>
-            <p className='gallery-product_price'>€ {product.price}</p>
-            <button className='gallery-product_btn'> Add </button>
+            <h3 className="gallery-product_title">{product.title}</h3>
+            <p className="gallery-product_price">€ {product.price}</p>
+            <button className="gallery-product_btn"> Add </button>
           </div>
-        )
+        );
       })}
-      <button onClick={showMore} className={btnClass}> Show more </button>
+      <button onClick={showMore} className={btnClass}>
+        {" "}
+        Show more{" "}
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
