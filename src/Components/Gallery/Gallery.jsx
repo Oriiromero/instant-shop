@@ -2,25 +2,26 @@ import "./gallery.scss";
 import axios from "axios";
 
 const Gallery = ({ products, setNumLimit, numLimit, url, api, btnClass, setBtnClass}) => {
-  const showMoreNum = 5;
+  const showMoreNum = 4;
 
   const showMore = async () => {
 
-   axios.get(api).then((res) => {
+   await axios.get(api).then((res) => {
       if (res.status === 200) {
+        if (res.data.length === numLimit + showMoreNum){
+          setBtnClass("gallery-btn hidden");
+          console.log('hola')
+        }
         if (numLimit <= res.data.length - showMoreNum) {
           setNumLimit(numLimit + showMoreNum);
         }
         else if (res.data.length - numLimit < showMoreNum){
           setNumLimit(numLimit + (res.data.length - numLimit));
         }
-        else if (res.data.length === numLimit ){
-          setBtnClass("gallery-btn hidden");
-        }
+        console.log(numLimit, res.data.length);
       }
     });
     
-    console.log(numLimit, showMoreNum);
   }; 
 
   return (

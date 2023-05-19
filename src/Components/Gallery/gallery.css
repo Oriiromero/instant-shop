@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap");
+@media ((min-width: 1200px) and (max-width: 1600px)) {
+  .gallery {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  .gallery-product {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(220, 219, 219);
+    margin: 15px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .gallery-product_img {
+    width: 150px;
+    height: 180px;
+  }
+  .gallery-product_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .gallery-product_title {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  .gallery-product_price {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .gallery-product_btn {
+    width: 80px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.8px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .gallery-product_btn:hover {
+    border: 0.5px solid #c6ddfa;
+    background-color: #DEECFF;
+    color: black;
+  }
+  .gallery-btn {
+    margin-top: 25px;
+    width: 180px;
+    height: 45px;
+    background-color: #DEECFF;
+    color: black;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.8px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .gallery-btn:hover {
+    background-color: #b8d3f9;
+  }
+  .gallery .hidden {
+    display: none;
+  }
+}
+@media ((min-width: 375px) and (max-width: 900px)) {
+  .gallery {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  .gallery-product {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(220, 219, 219);
+    margin: 15px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .gallery-product_img {
+    width: 150px;
+    height: 180px;
+  }
+  .gallery-product_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .gallery-product_title {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  .gallery-product_price {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .gallery-product_btn {
+    width: 80px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.8px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .gallery-product_btn:hover {
+    border: 0.5px solid #c6ddfa;
+    background-color: #DEECFF;
+    color: black;
+  }
+  .gallery-btn {
+    margin-top: 25px;
+    width: 180px;
+    height: 45px;
+    background-color: #DEECFF;
+    color: black;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.8px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .gallery-btn:hover {
+    background-color: #b8d3f9;
+  }
+  .gallery .hidden {
+    display: none;
+  }
+}/*# sourceMappingURL=gallery.css.map */
