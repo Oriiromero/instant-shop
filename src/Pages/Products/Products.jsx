@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./products.scss";
 import Gallery from "../../Components/Gallery/Gallery";
 import axios from "axios";
+import { ProductsContext } from "../../Components/Shared/ProductsContext";
 
 const Products = () => {
   const [numLimit, setNumLimit] = useState(8);
-  const api = "https://fakestoreapi.com/products";
-  const apiLimited = `https://fakestoreapi.com/products?limit=`;
+  const {api, allProducts, apiLimited} = useContext(ProductsContext);
   const [url, setUrl] = useState(apiLimited);
   const categories = [
     "/category/women's%20clothing",
@@ -16,11 +16,16 @@ const Products = () => {
   ];
   const [products, setProducts] = useState([]);
   const [btnClass, setBtnClass] = useState("gallery-btn");
+  let productsFiltered = [];
 
   useEffect(() => {
     axios.get(url + numLimit).then((res) => {
       if (res.status === 200) {
         setProducts(res.data);
+      }
+      if (allProducts.length === numLimit){
+        setBtnClass("gallery-btn hidden");
+        console.log('hola')
       }
     });
   }, [numLimit, url]);
@@ -45,15 +50,6 @@ const Products = () => {
   };
 
   const filterProducts = async (e) => {
-    let allProducts = [];
-    let productsFiltered = [];
-
-   await axios.get(api).then((res) => {
-      if (res.status === 200) {
-        allProducts = res.data;
-      }
-    });
-
     if (e.key === "Enter") {
       let value = e.target.value.toLowerCase();
 
@@ -62,6 +58,8 @@ const Products = () => {
           productsFiltered.push(product);
           setProducts(productsFiltered);
           setBtnClass("gallery-btn hidden");
+        } else {
+          return productsFiltered;
         }
       });
     }    
@@ -120,10 +118,9 @@ const Products = () => {
           products={products}
           setNumLimit={setNumLimit}
           numLimit={numLimit}
-          url={url}
-          api={api}
+          allProducts={allProducts}
           btnClass={btnClass}
-          setBtnClass={setBtnClass}
+          productsFiltered={productsFiltered}
         />
       </div>
     </div>
