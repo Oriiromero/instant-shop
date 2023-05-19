@@ -27,16 +27,15 @@ const Products = () => {
 
   const categoryFilter = async (category) => {
     const newUrl = api + category;
-    
+
     try {
       const res = await axios.get(newUrl);
       if (res.status === 200) {
         setProducts(res.data);
 
-        if(newUrl.includes('category')){
-          setBtnClass("gallery-btn hidden")
-        }
-        else {
+        if (newUrl.includes("category")) {
+          setBtnClass("gallery-btn hidden");
+        } else {
           setBtnClass("gallery-btn");
         }
       }
@@ -45,9 +44,28 @@ const Products = () => {
     }
   };
 
-  console.log('soy url:', url);
-  // console.log('soy api limitada:', apiLimited);
-  // console.log(products);
+  const filterProducts = async (e) => {
+    let allProducts = [];
+    let productsFiltered = [];
+
+   await axios.get(api).then((res) => {
+      if (res.status === 200) {
+        allProducts = res.data;
+      }
+    });
+
+    if (e.key === "Enter") {
+      let value = e.target.value.toLowerCase();
+
+      allProducts.filter((product) => {
+        if (product.title.toLowerCase().includes(value)) {
+          productsFiltered.push(product);
+          setProducts(productsFiltered);
+          setBtnClass("gallery-btn hidden");
+        }
+      });
+    }    
+  };
 
   return (
     <div className="main-products">
@@ -57,12 +75,13 @@ const Products = () => {
           className="main-products_search__input"
           type="text"
           placeholder="Search.."
+          onKeyPress={(event) => filterProducts(event)}
         />
       </div>
       <div className="main-products_categories">
         <p
           className="main-products_categories__p"
-          onClick={() => categoryFilter('?limit='+8)}
+          onClick={() => categoryFilter("?limit=" + 8)}
         >
           {" "}
           All{" "}
@@ -102,7 +121,7 @@ const Products = () => {
           setNumLimit={setNumLimit}
           numLimit={numLimit}
           url={url}
-          api = {api}
+          api={api}
           btnClass={btnClass}
           setBtnClass={setBtnClass}
         />
