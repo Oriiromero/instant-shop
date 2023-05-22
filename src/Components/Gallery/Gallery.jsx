@@ -1,7 +1,7 @@
 import "./gallery.scss";
 import axios from "axios";
 
-const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBtnClass, productsFiltered, prodExist}) => {
+const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBtnClass, prodExist}) => {
   const showMoreNum = 4;
 
   const showMore = async () => {

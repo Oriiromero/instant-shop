@@ -60,9 +60,9 @@ const Products = () => {
           setProducts(productsFiltered);
           setBtnClass("gallery-btn hidden");
           setProdExist(true);
-        } //else {
-        //   setProdExist(false);
-        // }
+        } else if(productsFiltered.length === 0){
+          setProdExist(false);
+        }
       });
     }    
   };
@@ -121,7 +121,7 @@ const Products = () => {
           numLimit={numLimit}
           allProducts={allProducts}
           btnClass={btnClass}
-          productsFiltered={productsFiltered}
+          setBtnClass={setBtnClass}
           prodExist={prodExist}
         />
       </div>
