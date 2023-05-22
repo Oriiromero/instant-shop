@@ -1,8 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "./gallery.scss";
-import axios from "axios";
 
 const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBtnClass, prodExist}) => {
   const showMoreNum = 4;
+  const navigate = useNavigate();
 
   const showMore = async () => {
 
@@ -19,6 +20,10 @@ const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBt
         console.log(numLimit, allProducts.length);    
   }; 
 
+  const goToProduct = (id) => {
+    navigate(`/products/${id}`);
+  }
+
 
   return (
     <>
@@ -32,7 +37,7 @@ const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBt
             </div>
             <h3 className="gallery-product_title">{product.title}</h3>
             <p className="gallery-product_price">€ {product.price}</p>
-            <button className="gallery-product_btn"> Add </button>
+            <button onClick={() => goToProduct(product.id)} className="gallery-product_btn"> Add </button>
           </div>
         );
       })}
