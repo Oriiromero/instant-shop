@@ -23,7 +23,7 @@ function App() {
         setAllProducts(res.data);
       }
     });  
-  })
+  },[])
 
   return (
     <>

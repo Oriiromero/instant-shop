@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import './header.scss'
+import { ProductsContext } from '../Shared/ProductsContext';
 
 const Header = () => {
 
@@ -8,6 +9,7 @@ const Header = () => {
   const [menu_class, setMenuClass] = useState('menu hidden');
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const navigate = useNavigate();
+  const {cartProducts} = useContext(ProductsContext);
 
   const updateMenu = () => {
     if(!isMenuClicked){
@@ -35,7 +37,10 @@ const Header = () => {
 
         <div className='shop'>
           <img className='shop-user' src='/assets/usuario.png' alt='user' />
-          <img className='shop-cart' src='/assets/cart.png' alt='cart' />
+          <div className='shop-cart'>
+            <img className='shop-cart_img' src='/assets/cart.png' alt='cart' />
+            {cartProducts.length > 0 && <div className='amount'>{cartProducts.length}</div>}
+          </div>
         </div> 
         <div className='burger-menu' onClick={updateMenu}>
           <div className={burger_class}></div>

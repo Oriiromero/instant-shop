@@ -52,7 +52,7 @@ const Products = () => {
   };
 
   //Get the products searched in an input
-  const filterProducts = async (e) => {
+  const filterProducts = (e) => {
     if (e.key === "Enter") {
       let value = e.target.value.toLowerCase();
 

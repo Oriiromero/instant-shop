@@ -15,8 +15,7 @@ const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBt
         }
         else if (allProducts.length - numLimit < showMoreNum){
           setNumLimit(numLimit + (allProducts.length - numLimit));
-        }
-        console.log(numLimit, allProducts.length);    
+        } 
   }; 
 
   //Go to the next component when button is clicked
