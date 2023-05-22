@@ -24,6 +24,16 @@ $breakpoints: (
     justify-content: center;
     height: 80vh;
     padding: 0 45px;
+    position: relative;
+
+    &_back {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        left: 55px;
+        cursor: pointer;
+    }
   }
 
   .main-product {
@@ -148,6 +158,15 @@ $breakpoints: (
     width: 96vw;
     justify-content: center;
     align-items: center;
+
+    &_back {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 110px;
+        left: 15px;
+        cursor: pointer;
+    }
   }
 
   .main-product {

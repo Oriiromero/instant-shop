@@ -437,10 +437,11 @@ $breakpoints: (
             margin-bottom: 80px;
             padding: 20px 15px;
             position: relative;
-            flex-wrap: wrap;
             align-content: center;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
 
             &__title {
                 font-family: "Allura", cursive;
