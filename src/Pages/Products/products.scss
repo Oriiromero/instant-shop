@@ -37,7 +37,7 @@ $breakpoints: (
         &_search {
             height: 40px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
             margin: 5px 55px;
 
@@ -104,5 +104,58 @@ $breakpoints: (
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        &_gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &_search {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+
+            &__p {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+
+            &__input {
+                width: 200px;
+                height: 25px;
+                padding: 5px 15px;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                font-family: "Gothic A1", sans-serif;
+                font-size: 13px;
+            }
+
+            &__input:focus {
+                outline: none;
+            }
+        }
+
+        &_categories {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            &__p {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                font-weight: bolder;
+                text-transform: uppercase;
+                margin: 15px 35px;;
+                position: relative;
+                cursor: pointer;
+            }
+        }
     }
 }

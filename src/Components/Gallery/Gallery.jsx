@@ -1,31 +1,29 @@
 import "./gallery.scss";
 import axios from "axios";
 
-const Gallery = ({ products, setNumLimit, numLimit, url, api, btnClass, setBtnClass}) => {
+const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBtnClass, productsFiltered, prodExist}) => {
   const showMoreNum = 4;
 
   const showMore = async () => {
 
-   await axios.get(api).then((res) => {
-      if (res.status === 200) {
-        if (res.data.length === numLimit + showMoreNum){
+        if (allProducts.length === numLimit + showMoreNum){
           setBtnClass("gallery-btn hidden");
           console.log('hola')
         }
-        if (numLimit <= res.data.length - showMoreNum) {
+        if (numLimit <= allProducts.length - showMoreNum) {
           setNumLimit(numLimit + showMoreNum);
         }
-        else if (res.data.length - numLimit < showMoreNum){
-          setNumLimit(numLimit + (res.data.length - numLimit));
+        else if (allProducts.length - numLimit < showMoreNum){
+          setNumLimit(numLimit + (allProducts.length - numLimit));
         }
-        console.log(numLimit, res.data.length);
-      }
-    });
-    
+        console.log(numLimit, allProducts.length);    
   }; 
 
+
   return (
-    <div className="gallery">
+    <>
+    {prodExist === false ? <p className="nonexistent">Oops, it seems like that product doesn't exist!</p> : (
+      <div className="gallery">
       {products.map((product, index) => {
         return (
           <div className="gallery-product" key={index}>
@@ -43,6 +41,8 @@ const Gallery = ({ products, setNumLimit, numLimit, url, api, btnClass, setBtnCl
         Show more{" "}
       </button>
     </div>
+    )}
+    </>
   );
 };
 

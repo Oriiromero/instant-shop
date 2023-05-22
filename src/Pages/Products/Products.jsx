@@ -16,6 +16,7 @@ const Products = () => {
   ];
   const [products, setProducts] = useState([]);
   const [btnClass, setBtnClass] = useState("gallery-btn");
+  const [prodExist, setProdExist] = useState();
   let productsFiltered = [];
 
   useEffect(() => {
@@ -58,9 +59,10 @@ const Products = () => {
           productsFiltered.push(product);
           setProducts(productsFiltered);
           setBtnClass("gallery-btn hidden");
-        } else {
-          return productsFiltered;
-        }
+          setProdExist(true);
+        } //else {
+        //   setProdExist(false);
+        // }
       });
     }    
   };
@@ -68,7 +70,6 @@ const Products = () => {
   return (
     <div className="main-products">
       <div className="main-products_search">
-        <p className="main-products_search__p"> Filters </p>
         <input
           className="main-products_search__input"
           type="text"
@@ -121,6 +122,7 @@ const Products = () => {
           allProducts={allProducts}
           btnClass={btnClass}
           productsFiltered={productsFiltered}
+          prodExist={prodExist}
         />
       </div>
     </div>

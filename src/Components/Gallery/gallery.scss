@@ -22,6 +22,15 @@ $breakpoints: (
 
 
 @include breakpoint(large){
+    .nonexistent {
+        height: 44.7vh;
+        display: flex;
+        align-items: center;
+        font-family: "Gothic A1", sans-serif;
+        font-size: 18px;
+        text-align: center;
+    }
+
     .gallery {
         width: 95%;
         height: 100%;
@@ -124,6 +133,16 @@ $breakpoints: (
 }
 
 @include breakpoint(small){
+    .nonexistent {
+        height: 55vh;
+        display: flex;
+        align-items: center;
+        font-family: "Gothic A1", sans-serif;
+        font-size: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
     .gallery {
         width: 95%;
         height: 100%;
