@@ -1,15 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import "./gallery.scss";
 
-const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBtnClass, prodExist}) => {
+const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBtnClass, productExist}) => {
   const showMoreNum = 4;
   const navigate = useNavigate();
 
+  //Show more button function by length of the products 
   const showMore = async () => {
-
         if (allProducts.length === numLimit + showMoreNum){
           setBtnClass("gallery-btn hidden");
-          console.log('hola')
         }
         if (numLimit <= allProducts.length - showMoreNum) {
           setNumLimit(numLimit + showMoreNum);
@@ -20,6 +19,7 @@ const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBt
         console.log(numLimit, allProducts.length);    
   }; 
 
+  //Go to the next component when button is clicked
   const goToProduct = (id) => {
     navigate(`/products/${id}`);
   }
@@ -27,7 +27,7 @@ const Gallery = ({ products, setNumLimit, numLimit, allProducts, btnClass, setBt
 
   return (
     <>
-    {prodExist === false ? <p className="nonexistent">Oops, it seems like that product doesn't exist!</p> : (
+    {productExist === false ? <p className="nonexistent">Oops, it seems like that product doesn't exist!</p> : (
       <div className="gallery">
       {products.map((product, index) => {
         return (

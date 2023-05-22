@@ -16,9 +16,10 @@ const Products = () => {
   ];
   const [products, setProducts] = useState([]);
   const [btnClass, setBtnClass] = useState("gallery-btn");
-  const [prodExist, setProdExist] = useState();
+  const [productExist, setProductExist] = useState();
   let productsFiltered = [];
 
+  //Get the products by a limited number
   useEffect(() => {
     axios.get(url + numLimit).then((res) => {
       if (res.status === 200) {
@@ -26,11 +27,11 @@ const Products = () => {
       }
       if (allProducts.length === numLimit){
         setBtnClass("gallery-btn hidden");
-        console.log('hola')
       }
     });
   }, [numLimit, url]);
 
+  //Filter the products by category as provided by the backend 
   const categoryFilter = async (category) => {
     const newUrl = api + category;
 
@@ -38,7 +39,7 @@ const Products = () => {
       const res = await axios.get(newUrl);
       if (res.status === 200) {
         setProducts(res.data);
-
+        //show button or not
         if (newUrl.includes("category")) {
           setBtnClass("gallery-btn hidden");
         } else {
@@ -50,18 +51,23 @@ const Products = () => {
     }
   };
 
+  //Get the products searched in an input
   const filterProducts = async (e) => {
     if (e.key === "Enter") {
       let value = e.target.value.toLowerCase();
 
       allProducts.filter((product) => {
         if (product.title.toLowerCase().includes(value)) {
+          //Push products into an empty array
           productsFiltered.push(product);
+          //Update the products with this filtered ones
           setProducts(productsFiltered);
+          //Hide the button
           setBtnClass("gallery-btn hidden");
-          setProdExist(true);
+          setProductExist(true);
         } else if(productsFiltered.length === 0){
-          setProdExist(false);
+          //The array is empty so we set this to false
+          setProductExist(false);
         }
       });
     }    
@@ -122,7 +128,7 @@ const Products = () => {
           allProducts={allProducts}
           btnClass={btnClass}
           setBtnClass={setBtnClass}
-          prodExist={prodExist}
+          productExist={productExist}
         />
       </div>
     </div>
