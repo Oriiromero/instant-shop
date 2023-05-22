@@ -204,7 +204,6 @@ $breakpoints: (
             appearance: none;
             -webkit-appearance: none;
             cursor: pointer;
-            z-index: 5;
         }
 
         &-cart {
@@ -221,7 +220,6 @@ $breakpoints: (
             cursor: pointer;
             font-size: 10px;
             transition: 0.5s;
-            z-index: 5;
         }
 
         &-cart:hover{

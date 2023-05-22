@@ -199,8 +199,10 @@ $breakpoints: (
       background-color: #f4e6e6ea;
       position: absolute;
       top: 100px;
-      right: 0;
       transition: opacity 0.5s;
+      overflow-x: none;
+      transition: 1s;
+      z-index: 1;
 
       .burger-links {
         margin-top: 150px;
@@ -226,12 +228,13 @@ $breakpoints: (
     }
 
     .hidden {
-      opacity: 0;
+      right: -270px;
+      display: none;
     }
 
     .visible {
       display: inherit;
-      opacity: 1;
+      right: 0;
     }
 
     // CLICKED
