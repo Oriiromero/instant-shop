@@ -106,6 +106,99 @@ $breakpoints: (
         cursor: pointer;
       }
     }
+
+    //CART MODAL 
+    .cart-modal {
+      position: absolute;
+      z-index: 4;
+      top: 80px;
+      left: 82%;
+      width: 230px;
+      height: auto;
+      background-color: rgb(239, 250, 252);
+      border: 1px solid rgb(227, 244, 247);
+      padding: 10px;
+
+      &_product {
+        border-bottom: 1px solid #d0d1d2e8;
+        padding: 0 5px;
+        color: black;
+        font-family: "Gothic A1", sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+
+        &-up {
+          width: 120px;
+          &__title {
+            font-weight: bolder;
+            font-size: 12px;
+            font-family: "Gothic A1", sans-serif;
+          }
+  
+          &__amount {
+            font-size: 12px;
+            color: rgb(56, 56, 56);
+            margin-bottom: 5px;
+  
+            strong {
+              color: black;
+            }
+          }
+        }
+
+        &-info {  
+          width: 100px;
+          display: flex;
+          justify-content: flex-end;
+
+          &__price {
+            font-size: 13px;
+            font-weight: bolder;
+          }
+        }
+
+        &__total {
+          font-weight: bolder;
+          font-size: 15px;
+          font-family: "Gothic A1", sans-serif;
+          margin: 14px 5px 0 5px;
+        }
+
+        &__btn {
+          width: 70px;
+          padding: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border: none;
+          background-color: #DEECFF;
+          margin-left: 150px;
+          margin-bottom: 5px;
+          transition: 0.5s;
+          font-family: "Gothic A1", sans-serif;
+          font-size: 12px;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+
+        &__btn:hover{
+          background-color: #a5c6f6;
+          color: black;
+        }
+      }
+
+      .triangle {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(239, 250, 252);
+        position: absolute;
+        top: -10px;
+        rotate: 45deg;
+        left: 205px;
+      }
+    }
+
   }
 }
 
@@ -255,6 +348,97 @@ $breakpoints: (
     .burger-bar.unclicked {
       transform: rotate(0) translate(0);
       transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    }
+
+    //CART MODAL 
+    .cart-modal {
+      position: absolute;
+      z-index: 4;
+      top: 80px;
+      left: 40%;
+      width: 230px;
+      height: auto;
+      background-color: rgb(239, 250, 252);
+      padding: 10px;
+
+      &_product {
+        border-bottom: 1px solid #d0d1d2e8;
+        padding: 0 5px;
+        color: black;
+        font-family: "Gothic A1", sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+
+        &-up {
+          width: 120px;
+          &__title {
+            font-weight: bolder;
+            font-size: 12px;
+            font-family: "Gothic A1", sans-serif;
+          }
+  
+          &__amount {
+            font-size: 12px;
+            color: rgb(56, 56, 56);
+            margin-bottom: 5px;
+  
+            strong {
+              color: black;
+            }
+          }
+        }
+
+        &-info {  
+          width: 100px;
+          display: flex;
+          justify-content: flex-end;
+
+          &__price {
+            font-size: 13px;
+            font-weight: bolder;
+          }
+        }
+
+        &__total {
+          font-weight: bolder;
+          font-size: 15px;
+          font-family: "Gothic A1", sans-serif;
+          margin: 14px 5px 0 5px;
+        }
+
+        &__btn {
+          width: 70px;
+          padding: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border: none;
+          background-color: #DEECFF;
+          margin-left: 150px;
+          margin-bottom: 5px;
+          transition: 0.5s;
+          font-family: "Gothic A1", sans-serif;
+          font-size: 12px;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+
+        &__btn:hover{
+          background-color: #a5c6f6;
+          color: black;
+        }
+      }
+
+      .triangle {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(239, 250, 252);
+        position: absolute;
+        top: -10px;
+        rotate: 45deg;
+        left: 180px;
+      }
     }
   }
 }

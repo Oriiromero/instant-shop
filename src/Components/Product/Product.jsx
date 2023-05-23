@@ -5,12 +5,12 @@ import { ProductsContext } from "../Shared/ProductsContext";
 
 const Product = () => {
   let { id } = useParams();
-  const { allProducts, cartProducts, setCartProducts } =
+  const { allProducts, cartProducts, setCartProducts, setOpenCart } =
     useContext(ProductsContext);
   const [singleProduct, setSingleProduct] = useState([null]);
   const [productStars, setProductStars] = useState();
   const [productsCount, setProductCount] = useState();
-  const [selectedValue, setSelectedValue] = useState("");
+  const [selectedValue, setSelectedValue] = useState(1);
   const navigate = useNavigate();
 
   //Check if the product we need matches with the id in the url
@@ -42,11 +42,10 @@ const Product = () => {
     };
 
     setCartProducts([...cartProducts, addedProduct]);
+    setOpenCart(true);
 
-    console.log(addedProduct);
   };
 
-  console.log(cartProducts);
 
   return (
     <div className="product-page">

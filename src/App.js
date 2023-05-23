@@ -16,6 +16,7 @@ function App() {
   const apiLimited = `https://fakestoreapi.com/products?limit=`;
   const [allProducts, setAllProducts] = useState([]);
   const [cartProducts, setCartProducts] = useState([]);
+  const [openCart, setOpenCart] = useState(false);
 
   useEffect(() => {
     axios.get(api).then((res) => {
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <>
-      <ProductsContext.Provider value={{ api, allProducts, apiLimited, cartProducts, setCartProducts }}>
+      <ProductsContext.Provider value={{ api, allProducts, apiLimited, cartProducts, setCartProducts, openCart, setOpenCart }}>
         <Router>
           <Header />
           <div className="App">
