@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap");
+@media ((min-width: 1200px) and (max-width: 1600px)) {
+  .main-products {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-products_gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-products_search {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 5px 55px;
+  }
+  .main-products_search__p {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .main-products_search__input {
+    width: 200px;
+    height: 25px;
+    padding: 5px 15px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 13px;
+  }
+  .main-products_search__input:focus {
+    outline: none;
+  }
+  .main-products_categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-products_categories__p {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 10px 35px;
+    position: relative;
+    cursor: pointer;
+  }
+  .main-products_categories__p:after {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+  }
+  .main-products_categories__p:hover:after {
+    width: 100%;
+  }
+}
+@media ((min-width: 375px) and (max-width: 900px)) {
+  .main-products {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-products_gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-products_search {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  .main-products_search__p {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .main-products_search__input {
+    width: 200px;
+    height: 25px;
+    padding: 5px 15px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 13px;
+  }
+  .main-products_search__input:focus {
+    outline: none;
+  }
+  .main-products_categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .main-products_categories__p {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 15px 35px;
+    position: relative;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=products.css.map */

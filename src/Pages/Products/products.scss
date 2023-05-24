@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap');
+
+$breakpoints: (
+    "small": "(min-width: 375px) and (max-width: 900px)",
+    "medium": "(min-width: 900px) and (max-width: 1200px)",
+    "large": "(min-width: 1200px) and (max-width: 1600px)",
+);
+
+@mixin breakpoint($user-value) {
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map 
+    {
+        @media (#{$my-map}) {
+            @content;
+        }
+    }
+    @else 
+    {
+        @error 'Oops, #{$user-value} is not defined'
+    }
+};
+
+@include breakpoint(large){
+    .main-products {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &_gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &_search {
+            height: 40px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 5px 55px;
+
+            &__p {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+
+            &__input {
+                width: 200px;
+                height: 25px;
+                padding: 5px 15px;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                font-family: "Gothic A1", sans-serif;
+                font-size: 13px;
+            }
+
+            &__input:focus {
+                outline: none;
+            }
+        }
+
+        &_categories {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__p {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 18px;
+                font-weight: bolder;
+                text-transform: uppercase;
+                margin: 10px 35px;
+                position: relative;
+                cursor: pointer;
+            }
+
+            &__p:after {
+                content: '';
+                position: absolute;
+                background-color: #000000;
+                height: 3px;
+                width: 0;
+                left: 0;
+                bottom: -10px;
+                transition: 0.4s;
+            }
+
+            &__p:hover:after{
+                width: 100%;
+              }
+        }
+    }
+}
+
+@include breakpoint(small){
+    .main-products {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &_gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &_search {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+
+            &__p {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+
+            &__input {
+                width: 200px;
+                height: 25px;
+                padding: 5px 15px;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                font-family: "Gothic A1", sans-serif;
+                font-size: 13px;
+            }
+
+            &__input:focus {
+                outline: none;
+            }
+        }
+
+        &_categories {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            &__p {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 12px;
+                font-weight: bolder;
+                text-transform: uppercase;
+                margin: 15px 35px;;
+                position: relative;
+                cursor: pointer;
+            }
+        }
+    }
+}

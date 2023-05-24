@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gothic+A1:wght@300;400;500&display=swap");
+@media ((min-width: 1200px) and (max-width: 1600px)) {
+  .footer {
+    width: 100%;
+    height: 200px;
+    background-color: #f4e6e6;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .footer-container .li-title {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  .footer-container_socials, .footer-container_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  .footer-container_socials .ulist-item, .footer-container_info .ulist-item {
+    list-style: none;
+    font-family: "Gothic A1", sans-serif;
+    color: #454545;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 12px 0;
+    cursor: pointer;
+  }
+  .footer-container_socials .ulist-item a, .footer-container_info .ulist-item a {
+    text-decoration: none;
+    font-family: "Gothic A1", sans-serif;
+    color: #454545;
+  }
+  .footer-container_pay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  .footer-container_pay .ulist-item {
+    list-style: none;
+  }
+  .footer-container_pay .ulist-item img {
+    width: 30px;
+    padding-left: 5px;
+    cursor: pointer;
+  }
+  .footer-copy {
+    margin-left: 44%;
+    font-family: "Gothic A1", sans-serif;
+    color: #454545;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+@media ((min-width: 375px) and (max-width: 900px)) {
+  .footer {
+    width: 100%;
+    height: 200px;
+    background-color: #f4e6e6;
+    text-align: center;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .footer-container .li-title {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  .footer-container_socials, .footer-container_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  .footer-container_socials .ulist-item, .footer-container_info .ulist-item {
+    list-style: none;
+    font-family: "Gothic A1", sans-serif;
+    color: #454545;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 12px 0;
+    cursor: pointer;
+  }
+  .footer-container_socials .ulist-item a, .footer-container_info .ulist-item a {
+    text-decoration: none;
+    font-family: "Gothic A1", sans-serif;
+    color: #454545;
+  }
+  .footer-container_pay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  .footer-container_pay .ulist-item {
+    list-style: none;
+  }
+  .footer-container_pay .ulist-item img {
+    width: 30px;
+    padding-left: 6px;
+    cursor: pointer;
+  }
+  .footer-copy {
+    font-family: "Gothic A1", sans-serif;
+    color: #454545;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}/*# sourceMappingURL=footer.css.map */

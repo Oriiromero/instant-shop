@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap");
+
+$breakpoints: (
+  "small": "(min-width: 375px) and (max-width: 900px)",
+  "medium": "(min-width: 900px) and (max-width: 1200px)",
+  "large": "(min-width: 1200px) and (max-width: 1600px)",
+);
+
+@mixin breakpoint($user-value) {
+  $my-map: map-get($breakpoints, $user-value);
+  @if $my-map {
+    @media (#{$my-map}) {
+      @content;
+    }
+  } @else {
+    @error 'Oops, #{$user-value} is not defined';
+  }
+}
+
+@include breakpoint(large) {
+  .product-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 0 45px;
+    position: relative;
+
+    &_back {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        left: 55px;
+        cursor: pointer;
+    }
+  }
+
+  .main-product {
+    padding: 15px 35px;
+    display: flex;
+    justify-content: center;
+
+    &_img {
+        width: 340px;
+        height: 340px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_info {
+        width: 45%;
+        margin: 0 70px;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-family: "Gothic A1", sans-serif;
+            margin: 0 10px;
+        }
+
+        &-descr {
+            margin: 10px 10px;
+            font-family: "Gothic A1", sans-serif;
+            font-size: 14px;
+            text-align: justify;
+            color: rgb(66, 66, 66);
+        }
+
+        &-price {
+            margin: 10px 10px;
+            font-family: "Gothic A1", sans-serif;
+            font-size: 15px;
+            font-weight: bolder;
+            
+        }
+
+        &-amount {
+            width: 50px;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+            margin: 20px 10px;
+            font-size: 12px;
+            font-family: "Gothic A1", sans-serif;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        &-cart {
+            width: 150px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-family: "Gothic A1", sans-serif;
+            background-color: #DEECFF;
+            color: black;
+            font-weight: bolder;
+            margin: 15px 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        &-cart:hover{
+            background-color: #a5c6f6;
+            color: black;
+        }
+    }
+
+    .star-box{
+        width:150px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        margin-left: 7px;
+
+        &-inner{
+            display: flex;
+            width: 40px;
+            height: 20px;
+            background-color: transparent;
+            background-color: #F7C04A;
+        }
+      
+        &-star {
+            width: 80px;
+            height: 20px;
+        }
+
+        .star-num {
+            font-family: "Gothic A1", sans-serif;
+            margin-top: 5px;
+            margin-right: 10px;
+            color: rgb(58, 170, 201);
+            font-size: 14px;
+        }
+
+        .random {
+            font-family: "Gothic A1", sans-serif;
+            font-size: 12px;
+            margin-left: 65px;
+            margin-top: 5px;
+        };
+    }
+  }
+}
+
+@include breakpoint(small) {
+  .product-page {
+    display: flex;
+    height: 80vh;
+    width: 96vw;
+    justify-content: center;
+    align-items: center;
+
+    &_back {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 110px;
+        left: 15px;
+        cursor: pointer;
+    }
+  }
+
+  .main-product {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    &_img {
+        width: 200px;
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_info {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-family: "Gothic A1", sans-serif;
+            margin: 0 10px;
+            font-size: 15px;
+        }
+
+        &-descr {
+            margin: 10px 10px;
+            font-family: "Gothic A1", sans-serif;
+            font-size: 11px;
+            text-align: justify;
+            color: rgb(66, 66, 66);
+        }
+
+        &-price {
+            margin: 10px 10px;
+            font-family: "Gothic A1", sans-serif;
+            font-size: 13px;
+            font-weight: bolder;
+            
+        }
+
+        &-amount {
+            width: 40px;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+            margin: 20px 10px;
+            font-size: 10px;
+            font-family: "Gothic A1", sans-serif;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        &-cart {
+            width: 100px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-family: "Gothic A1", sans-serif;
+            background-color: #DEECFF;
+            color: black;
+            font-weight: bolder;
+            margin: 15px 10px;
+            cursor: pointer;
+            font-size: 10px;
+            transition: 0.5s;
+        }
+
+        &-cart:hover{
+            background-color: #a5c6f6;
+            color: black;
+        }
+    }
+
+    .star-box{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        margin-left: 7px;
+        z-index: -1;
+
+        &-inner{
+            display: flex;
+            width: 40px;
+            height: 20px;
+            background-color: transparent;
+            background-color: #F7C04A;
+        }
+      
+        &-star {
+            width: 80px;
+            height: 20px;
+        }
+
+        .star-num {
+            font-family: "Gothic A1", sans-serif;
+            margin-top: 5px;
+            margin-right: 10px;
+            color: rgb(58, 170, 201);
+            font-size: 14px;
+        }
+
+        .random {
+            font-family: "Gothic A1", sans-serif;
+            font-size: 12px;
+            margin-left: 35px;
+            margin-top: 5px;
+        };
+    }
+  }
+}
