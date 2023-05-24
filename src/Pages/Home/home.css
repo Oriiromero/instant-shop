@@ -446,7 +446,7 @@
     background-color: white;
   }
 }
-@media ((min-width: 2400px) and (max-width: 3600px)) {
+@media ((min-width: 2000px) and (max-width: 3600px)) {
   .top-home {
     width: 100%;
     height: 100%;

@@ -3,7 +3,7 @@
 $breakpoints: (
   "small": "(max-width: 900px)",
     "medium": "(min-width: 900px) and (max-width: 1600px)",
-    "large": "(min-width: 2400px) and (max-width: 3600px)",
+    "large": "(min-width: 2000px) and (max-width: 3600px)",
 );
 
 @mixin breakpoint($user-value) {
@@ -128,16 +128,32 @@ $breakpoints: (
         height: 80vh;
     
         &-main {
+          margin: 35px 0;
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: space-evenly;
     
-          &_title {
-            font-family: "Gothic A1", sans-serif;
-            font-weight: bolder;
-            margin: 10px 0;
+          &_info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            &__title {
+                font-family: "Gothic A1", sans-serif;
+                font-weight: bolder;
+                margin: 10px 0;
+              }
+        
+              &__text {
+                font-family: "Gothic A1", sans-serif;
+                font-size: 15px;
+                width: 350px;
+                text-align: justify;
+                margin: 10px 0 50px 0;
+              }
           }
-    
+
           &_form {
             display: flex;
             flex-direction: column;

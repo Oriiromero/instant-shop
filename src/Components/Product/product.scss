@@ -3,7 +3,7 @@
 $breakpoints: (
     "small": "(max-width: 900px)",
     "medium": "(min-width: 900px) and (max-width: 1600px)",
-    "large": "(min-width: 2400px) and (max-width: 3600px)",
+    "large": "(min-width: 2000px) and (max-width: 3600px)",
 );
 
 @mixin breakpoint($user-value) {

@@ -362,7 +362,7 @@
     left: 180px;
   }
 }
-@media ((min-width: 2400px) and (max-width: 3600px)) {
+@media ((min-width: 2000px) and (max-width: 3600px)) {
   .header {
     max-width: 100vw;
     height: 80px;

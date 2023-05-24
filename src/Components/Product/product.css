@@ -236,7 +236,7 @@
     display: none;
   }
 }
-@media ((min-width: 2400px) and (max-width: 3600px)) {
+@media ((min-width: 2000px) and (max-width: 3600px)) {
   .product-page {
     display: flex;
     align-items: center;

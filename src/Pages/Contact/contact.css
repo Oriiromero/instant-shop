@@ -96,14 +96,28 @@
     height: 80vh;
   }
   .contact-main {
+    margin: 35px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .contact-main_info {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .contact-main_title {
+  .contact-main_info__title {
     font-family: "Gothic A1", sans-serif;
     font-weight: bolder;
     margin: 10px 0;
+  }
+  .contact-main_info__text {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 15px;
+    width: 350px;
+    text-align: justify;
+    margin: 10px 0 50px 0;
   }
   .contact-main_form {
     display: flex;
@@ -156,7 +170,7 @@
     background-color: #DEECFF;
   }
 }
-@media ((min-width: 2400px) and (max-width: 3600px)) {
+@media ((min-width: 2000px) and (max-width: 3600px)) {
   .contact {
     width: 100%;
     height: 60vh;
