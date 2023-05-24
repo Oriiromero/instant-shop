@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gothic+A1:wght@300;400&display=swap");
-@media ((min-width: 1200px) and (max-width: 1600px)) {
+@media ((min-width: 900px) and (max-width: 1600px)) {
   .about {
     width: 100%;
     display: flex;
@@ -52,7 +52,7 @@
     margin: 20px 0 20px 0;
   }
 }
-@media ((min-width: 375px) and (max-width: 900px)) {
+@media ((max-width: 900px)) {
   .about {
     width: 100%;
     display: flex;
@@ -101,6 +101,60 @@
     font-family: "Gothic A1", sans-serif;
     font-style: italic;
     font-size: 15px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+  }
+}
+@media ((min-width: 2400px) and (max-width: 3600px)) {
+  .about {
+    width: 100%;
+    height: 76.7vh;
+    display: flex;
+    justify-content: center;
+  }
+  .about-main {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 155px 0 45px 0;
+  }
+  .about-main_title {
+    font-family: "Allura", cursive;
+    font-size: 50px;
+    font-weight: lighter;
+    margin: 10px 0;
+  }
+  .about-main_p {
+    width: 950px;
+    font-family: "Gothic A1", sans-serif;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+  }
+  .about-main_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-main_box__title {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 10px 0 5px 0;
+  }
+  .about-main_box__p {
+    width: 850px;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    margin: 10px 0 5px 0;
+  }
+  .about-main__p {
+    width: 650px;
+    font-family: "Gothic A1", sans-serif;
+    font-style: italic;
+    font-size: 18px;
     text-align: center;
     margin: 20px 0 20px 0;
   }

@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gothic+A1:wght@300;400&display=swap");
 
 $breakpoints: (
-  "small": "(min-width: 375px) and (max-width: 900px)",
-  "medium": "(min-width: 900px) and (max-width: 1200px)",
-  "large": "(min-width: 1200px) and (max-width: 1600px)",
+    "small": "(max-width: 900px)",
+    "medium": "(min-width: 900px) and (max-width: 1600px)",
+    "large": "(min-width: 2400px) and (max-width: 3600px)",
 );
 
 @mixin breakpoint($user-value) {
@@ -17,7 +17,7 @@ $breakpoints: (
   }
 }
 
-@include breakpoint(large) {
+@include breakpoint(medium) {
     .about {
         width: 100%;
         display: flex;
@@ -132,6 +132,68 @@ $breakpoints: (
                 font-family: 'Gothic A1', sans-serif;
                 font-style: italic;
                 font-size: 15px;
+                text-align: center;
+                margin: 20px 0 20px 0;
+            }
+        }
+    }
+}
+
+@include breakpoint(large) {
+    .about {
+        width: 100%;
+        height: 76.7vh;
+        display: flex;
+        justify-content: center;
+
+        &-main {
+            width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 155px 0 45px 0;
+
+            &_title {
+                font-family: 'Allura', cursive;
+                font-size: 50px;
+                font-weight: lighter;
+                margin: 10px 0;
+            }
+
+            &_p {
+                width: 950px;
+                font-family: 'Gothic A1', sans-serif; 
+                text-align: center;
+                font-size: 18px;
+                margin: 10px 0 5px 0;
+            }
+
+            &_box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__title {
+                    font-family: 'Gothic A1', sans-serif;
+                    font-weight: bolder;
+                    font-size: 20px;
+                    margin: 10px 0 5px 0;
+                }
+
+                &__p {
+                    width: 850px;
+                    font-family: 'Gothic A1', sans-serif;
+                    font-size: 18px;
+                    text-align: justify;
+                    margin: 10px 0 5px 0;
+                }
+            }
+
+            &__p {
+                width: 650px;
+                font-family: 'Gothic A1', sans-serif;
+                font-style: italic;
+                font-size: 18px;
                 text-align: center;
                 margin: 20px 0 20px 0;
             }

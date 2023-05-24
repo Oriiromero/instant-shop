@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap");
-@media ((min-width: 1200px) and (max-width: 1600px)) {
+@media ((min-width: 900px) and (max-width: 1600px)) {
   .top-home {
     width: 100%;
     height: 100%;
@@ -249,7 +249,7 @@
     background-color: white;
   }
 }
-@media ((min-width: 375px) and (max-width: 900px)) {
+@media ((max-width: 900px)) {
   .top-home {
     width: 100%;
     height: 100%;
@@ -259,7 +259,7 @@
     align-items: center;
   }
   .top-home_news {
-    width: 400px;
+    width: 350px;
     height: 300px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -315,7 +315,7 @@
     display: none;
   }
   .top-home_introduction {
-    width: 400px;
+    width: 350px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -361,7 +361,7 @@
     background-color: #DEECFF;
   }
   .top-home_gal {
-    width: 80%;
+    width: 85%;
     height: 700px;
     display: flex;
     background-color: #DEECFF;
@@ -386,7 +386,7 @@
     left: 35px;
   }
   .top-home_gal__box {
-    width: 150px;
+    width: 120px;
     display: flex;
     height: 250px;
     flex-direction: column;
@@ -440,6 +440,257 @@
   .top-home_gal__box-btn img {
     width: 15px;
     height: 15px;
+  }
+  .top-home_gal__box-btn:hover {
+    color: black;
+    background-color: white;
+  }
+}
+@media ((min-width: 2400px) and (max-width: 3600px)) {
+  .top-home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top-home_news {
+    width: 80%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .top-home_newin {
+    width: 50%;
+    background-color: #DEECFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .top-home_newin__drop {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 35px;
+  }
+  .top-home_newin__title {
+    font-family: "Allura", cursive;
+    font-size: 80px;
+    margin-left: 30px;
+    font-weight: lighter;
+  }
+  .top-home_newin__btn {
+    background-color: black;
+    color: white;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .top-home_newin__btn img {
+    width: 15px;
+  }
+  .top-home_newin__btn:hover {
+    color: black;
+    background-color: white;
+  }
+  .top-home_model {
+    width: 50%;
+    height: 100%;
+    background-color: #FDFBFE;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .top-home_model .circle-big {
+    background-color: #DEECFF;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    border-radius: 50%;
+    top: 170px;
+    left: 450px;
+    z-index: 1;
+  }
+  .top-home_model .circle-medium {
+    background-color: #DEECFF;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    top: 115px;
+    left: 320px;
+    z-index: 1;
+  }
+  .top-home_model .circle-little {
+    background-color: #DEECFF;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 50%;
+    top: 490px;
+    left: 800px;
+    z-index: 1;
+  }
+  .top-home_model .circle-empty {
+    border: #DEECFF 2px solid;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    top: 150px;
+    left: 590px;
+    z-index: 1;
+  }
+  .top-home_model img {
+    width: 500px;
+    z-index: 2;
+    position: relative;
+  }
+  .top-home_introduction {
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0;
+  }
+  .top-home_introduction__title {
+    font-family: "Allura", cursive;
+    font-size: 50px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+  }
+  .top-home_introduction__p {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px 15px;
+  }
+  .top-home_introduction__btn {
+    background-color: black;
+    color: white;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 15px;
+  }
+  .top-home_introduction__btn img {
+    width: 15px;
+  }
+  .top-home_introduction__btn:hover {
+    color: black;
+    background-color: #DEECFF;
+  }
+  .top-home_gal {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background-color: #DEECFF;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding: 0 15px;
+    position: relative;
+    justify-content: space-around;
+  }
+  .top-home_gal__title {
+    font-family: "Allura", cursive;
+    font-weight: lighter;
+    position: absolute;
+    font-size: 30px;
+    top: 20px;
+    left: 35px;
+  }
+  .top-home_gal__box {
+    width: 350px;
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0 10px;
+    box-shadow: 1px 1px 8px 1px #ABC9FF;
+    cursor: pointer;
+  }
+  .top-home_gal__box-img {
+    width: 100px;
+    height: 150px;
+  }
+  .top-home_gal__box-img img {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+  }
+  .top-home_gal__box-title {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    width: 150px;
+    text-align: center;
+  }
+  .top-home_gal__box-price {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .top-home_gal__box-btn {
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+    top: 430px;
+    left: 44%;
+  }
+  .top-home_gal__box-btn .top-home_gal__box-img {
+    width: 15px;
+    height: 20px;
   }
   .top-home_gal__box-btn:hover {
     color: black;

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap");
-@media ((min-width: 1200px) and (max-width: 1600px)) {
+@media ((min-width: 900px) and (max-width: 1600px)) {
   .product-page {
     display: flex;
     align-items: center;
@@ -116,7 +116,7 @@
     margin-top: 5px;
   }
 }
-@media ((min-width: 375px) and (max-width: 900px)) {
+@media ((max-width: 900px)) {
   .product-page {
     display: flex;
     height: 80vh;
@@ -232,6 +232,124 @@
     font-family: "Gothic A1", sans-serif;
     font-size: 12px;
     margin-left: 35px;
+    margin-top: 5px;
+    display: none;
+  }
+}
+@media ((min-width: 2400px) and (max-width: 3600px)) {
+  .product-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 0 45px;
+    position: relative;
+  }
+  .product-page_back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 55px;
+    cursor: pointer;
+  }
+  .main-product {
+    padding: 15px 35px;
+    display: flex;
+    justify-content: center;
+  }
+  .main-product_img {
+    width: 340px;
+    height: 340px;
+  }
+  .main-product_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .main-product_info {
+    width: 45%;
+    margin: 0 70px;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-product_info-title {
+    font-family: "Gothic A1", sans-serif;
+    margin: 0 10px;
+  }
+  .main-product_info-descr {
+    margin: 10px 10px;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    color: rgb(66, 66, 66);
+  }
+  .main-product_info-price {
+    margin: 10px 10px;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .main-product_info-amount {
+    width: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 20px 10px;
+    font-size: 12px;
+    font-family: "Gothic A1", sans-serif;
+    -moz-appearance: none;
+         appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  .main-product_info-cart {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Gothic A1", sans-serif;
+    background-color: #DEECFF;
+    color: black;
+    font-weight: bolder;
+    margin: 15px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .main-product_info-cart:hover {
+    background-color: #a5c6f6;
+    color: black;
+  }
+  .main-product .star-box {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-left: 7px;
+  }
+  .main-product .star-box-inner {
+    display: flex;
+    width: 40px;
+    height: 20px;
+    background-color: transparent;
+    background-color: #F7C04A;
+  }
+  .main-product .star-box-star {
+    width: 80px;
+    height: 20px;
+  }
+  .main-product .star-box .star-num {
+    font-family: "Gothic A1", sans-serif;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: rgb(58, 170, 201);
+    font-size: 14px;
+  }
+  .main-product .star-box .random {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    margin-left: 65px;
     margin-top: 5px;
   }
 }/*# sourceMappingURL=product.css.map */
