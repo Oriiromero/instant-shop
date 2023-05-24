@@ -30,7 +30,39 @@
   .header .links .burger-menu {
     display: none;
   }
-  .header .menu, .header .burger-link {
+  .header .shop {
+    display: flex;
+  }
+  .header .shop-cart {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    position: relative;
+  }
+  .header .shop-cart img {
+    width: 100%;
+    height: 100%;
+  }
+  .header .shop-cart .amount {
+    position: absolute;
+    padding: 1px 4px;
+    top: 15px;
+    left: 16px;
+    font-size: 10px;
+    border-radius: 50%;
+    border: solid 1px #a0c2f1;
+    background-color: rgba(160, 194, 241, 0.9098039216);
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+  }
+  .header .shop-user {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  .header .menu,
+  .header .burger-link {
     display: none;
   }
   .header .shop {
@@ -43,6 +75,86 @@
     height: 100%;
     margin-right: 15px;
     cursor: pointer;
+  }
+  .header .cart-modal {
+    position: absolute;
+    z-index: 4;
+    top: 80px;
+    left: 82%;
+    width: 230px;
+    height: auto;
+    background-color: rgb(239, 250, 252);
+    border: 1px solid rgb(227, 244, 247);
+    padding: 10px;
+  }
+  .header .cart-modal_product {
+    border-bottom: 1px solid rgba(208, 209, 210, 0.9098039216);
+    padding: 0 5px;
+    color: black;
+    font-family: "Gothic A1", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .header .cart-modal_product-up {
+    width: 120px;
+  }
+  .header .cart-modal_product-up__title {
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: "Gothic A1", sans-serif;
+  }
+  .header .cart-modal_product-up__amount {
+    font-size: 12px;
+    color: rgb(56, 56, 56);
+    margin-bottom: 5px;
+  }
+  .header .cart-modal_product-up__amount strong {
+    color: black;
+  }
+  .header .cart-modal_product-info {
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header .cart-modal_product-info__price {
+    font-size: 13px;
+    font-weight: bolder;
+  }
+  .header .cart-modal_product__total {
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: "Gothic A1", sans-serif;
+    margin: 14px 5px 0 5px;
+  }
+  .header .cart-modal_product__btn {
+    width: 70px;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    background-color: #DEECFF;
+    margin-left: 150px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .header .cart-modal_product__btn:hover {
+    background-color: #a5c6f6;
+    color: black;
+  }
+  .header .cart-modal .triangle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(239, 250, 252);
+    position: absolute;
+    top: -10px;
+    rotate: 45deg;
+    left: 205px;
   }
 }
 @media ((min-width: 375px) and (max-width: 900px)) {
@@ -80,6 +192,23 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
+    position: relative;
+  }
+  .header .links .shop-cart img {
+    width: 100%;
+    height: 100%;
+  }
+  .header .links .shop-cart .amount {
+    position: absolute;
+    padding: 1px 4px;
+    top: 18px;
+    left: 22px;
+    font-size: 10px;
+    border-radius: 50%;
+    border: solid 1px #a0c2f1;
+    background-color: rgba(160, 194, 241, 0.9098039216);
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
   }
   .header .links .shop-user {
     display: none;
@@ -107,8 +236,10 @@
     background-color: rgba(244, 230, 230, 0.9176470588);
     position: absolute;
     top: 100px;
-    right: 0;
     transition: opacity 0.5s;
+    overflow-x: none;
+    transition: 1s;
+    z-index: 1;
   }
   .header .menu .burger-links {
     margin-top: 150px;
@@ -127,14 +258,15 @@
     transition: 0.5s;
   }
   .header .menu .burger-links .burger-link:hover {
-    color: #EB4747;
+    color: #eb4747;
   }
   .header .hidden {
-    opacity: 0;
+    right: -270px;
+    display: none;
   }
   .header .visible {
     display: inherit;
-    opacity: 1;
+    right: 0;
   }
   .header .burger-bar.clicked:nth-child(1) {
     transform: rotate(-45deg) translate(-10px, 5px);
@@ -151,5 +283,84 @@
   .header .burger-bar.unclicked {
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  }
+  .header .cart-modal {
+    position: absolute;
+    z-index: 4;
+    top: 80px;
+    left: 40%;
+    width: 230px;
+    height: auto;
+    background-color: rgb(239, 250, 252);
+    padding: 10px;
+  }
+  .header .cart-modal_product {
+    border-bottom: 1px solid rgba(208, 209, 210, 0.9098039216);
+    padding: 0 5px;
+    color: black;
+    font-family: "Gothic A1", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .header .cart-modal_product-up {
+    width: 120px;
+  }
+  .header .cart-modal_product-up__title {
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: "Gothic A1", sans-serif;
+  }
+  .header .cart-modal_product-up__amount {
+    font-size: 12px;
+    color: rgb(56, 56, 56);
+    margin-bottom: 5px;
+  }
+  .header .cart-modal_product-up__amount strong {
+    color: black;
+  }
+  .header .cart-modal_product-info {
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header .cart-modal_product-info__price {
+    font-size: 13px;
+    font-weight: bolder;
+  }
+  .header .cart-modal_product__total {
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: "Gothic A1", sans-serif;
+    margin: 14px 5px 0 5px;
+  }
+  .header .cart-modal_product__btn {
+    width: 70px;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    background-color: #DEECFF;
+    margin-left: 150px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .header .cart-modal_product__btn:hover {
+    background-color: #a5c6f6;
+    color: black;
+  }
+  .header .cart-modal .triangle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(239, 250, 252);
+    position: absolute;
+    top: -10px;
+    rotate: 45deg;
+    left: 180px;
   }
 }/*# sourceMappingURL=header.css.map */

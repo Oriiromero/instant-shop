@@ -58,7 +58,7 @@ $breakpoints: (
 
       &-cart {
         width: 30px;
-        height: 30px;
+        height: auto;
         cursor: pointer;
         position: relative;
 
@@ -85,6 +85,7 @@ $breakpoints: (
         width: 30px;
         height: 30px;
         cursor: pointer;
+        display: none;
       }
     }
 

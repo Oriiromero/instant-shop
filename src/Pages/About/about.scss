@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gothic+A1:wght@300;400&display=swap");
+
+$breakpoints: (
+  "small": "(min-width: 375px) and (max-width: 900px)",
+  "medium": "(min-width: 900px) and (max-width: 1200px)",
+  "large": "(min-width: 1200px) and (max-width: 1600px)",
+);
+
+@mixin breakpoint($user-value) {
+  $my-map: map-get($breakpoints, $user-value);
+  @if $my-map {
+    @media (#{$my-map}) {
+      @content;
+    }
+  } @else {
+    @error 'Oops, #{$user-value} is not defined';
+  }
+}
+
+@include breakpoint(large) {
+    .about {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-main {
+            width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 0 45px 0;
+
+            &_title {
+                font-family: 'Allura', cursive;
+                font-size: 40px;
+                font-weight: lighter;
+                margin: 10px 0;
+            }
+
+            &_p {
+                width: 750px;
+                font-family: 'Gothic A1', sans-serif; 
+                text-align: center;
+                font-size: 15px;
+                margin: 10px 0 5px 0;
+            }
+
+            &_box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__title {
+                    font-family: 'Gothic A1', sans-serif;
+                    font-weight: bolder;
+                    font-size: 17px;
+                    margin: 10px 0 5px 0;
+                }
+
+                &__p {
+                    width: 650px;
+                    font-family: 'Gothic A1', sans-serif;
+                    font-size: 15px;
+                    text-align: justify;
+                    margin: 10px 0 5px 0;
+                }
+            }
+
+            &__p {
+                width: 650px;
+                font-family: 'Gothic A1', sans-serif;
+                font-style: italic;
+                font-size: 15px;
+                text-align: center;
+                margin: 20px 0 20px 0;
+            }
+        }
+    }
+}
+
+@include breakpoint(small) {
+    .about {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-main {
+            width: 390px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 0 45px 0;
+
+            &_title {
+                font-family: 'Allura', cursive;
+                font-size: 40px;
+                font-weight: lighter;
+                margin: 10px 0;
+            }
+
+            &_p {
+                width: 350px;
+                font-family: 'Gothic A1', sans-serif; 
+                text-align: center;
+                font-size: 15px;
+                margin: 10px 0 5px 0;
+            }
+
+            &_box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__title {
+                    font-family: 'Gothic A1', sans-serif;
+                    font-weight: bolder;
+                    font-size: 17px;
+                    margin: 10px 0 5px 0;
+                }
+
+                &__p {
+                    width: 300px;
+                    font-family: 'Gothic A1', sans-serif;
+                    font-size: 15px;
+                    text-align: justify;
+                    margin: 10px 0 5px 0;
+                }
+            }
+
+            &__p {
+                width: 250px;
+                font-family: 'Gothic A1', sans-serif;
+                font-style: italic;
+                font-size: 15px;
+                text-align: center;
+                margin: 20px 0 20px 0;
+            }
+        }
+    }
+}

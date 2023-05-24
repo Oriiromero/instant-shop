@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap");
 @media ((min-width: 1200px) and (max-width: 1600px)) {
+  .nonexistent {
+    height: 44.7vh;
+    display: flex;
+    align-items: center;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 18px;
+    text-align: center;
+  }
   .gallery {
     width: 95%;
     height: 100%;
@@ -91,6 +99,15 @@
   }
 }
 @media ((min-width: 375px) and (max-width: 900px)) {
+  .nonexistent {
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+  }
   .gallery {
     width: 95%;
     height: 100%;
@@ -100,7 +117,7 @@
     margin: 50px 0;
   }
   .gallery-product {
-    width: 200px;
+    width: 150px;
     height: 300px;
     display: flex;
     flex-direction: column;
