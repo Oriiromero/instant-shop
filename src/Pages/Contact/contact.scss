@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gothic+A1:wght@300;400&display=swap");
 
 $breakpoints: (
-  "small": "(min-width: 375px) and (max-width: 900px)",
-  "medium": "(min-width: 900px) and (max-width: 1200px)",
-  "large": "(min-width: 1200px) and (max-width: 1600px)",
+  "small": "(max-width: 900px)",
+    "medium": "(min-width: 900px) and (max-width: 1600px)",
+    "large": "(min-width: 2400px) and (max-width: 3600px)",
 );
 
 @mixin breakpoint($user-value) {
@@ -17,7 +17,7 @@ $breakpoints: (
   }
 }
 
-@include breakpoint(large) {
+@include breakpoint(medium) {
   .contact {
     width: 100%;
     height: 80vh;
@@ -197,3 +197,111 @@ $breakpoints: (
         }
       }
 }
+
+@include breakpoint(large) {
+  .contact {
+    width: 100%;
+    height: 60vh;
+
+    &-main {
+      margin: 216px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 170px;
+
+        &__title {
+            font-family: "Gothic A1", sans-serif;
+            font-weight: bolder;
+            margin: 10px 0;
+          }
+    
+          &__text {
+            font-family: "Gothic A1", sans-serif;
+            font-size: 15px;
+            width: 350px;
+            text-align: justify;
+            margin: 5px 0;
+          }
+      }
+
+      &_form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 1px 1px 4px 1px rgb(203, 203, 203);
+        padding: 15px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin: 0 170px;
+
+        label {
+            font-family: "Gothic A1", sans-serif;
+            font-size: 13px;
+            font-weight: bolder;
+        }
+
+        &__input {
+            width: 350px;
+            height: 35px;
+            margin: 5px 0 20px 0;
+            font-family: "Gothic A1", sans-serif;
+            font-size: 13px;
+            padding: 0 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid rgb(185, 185, 185);
+        }
+
+        &__input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        &__textarea {
+            font-family: "Gothic A1", sans-serif;
+            font-size: 13px;
+            width: 350px;
+            height: 100px;
+            margin: 5px 0 20px 0;
+            padding: 5px 5px;
+            border: 1px solid rgb(185, 185, 185);
+            resize: none;
+        }
+
+        &__input:focus, &__textarea:focus {
+            outline: none;
+        }
+
+        &__btn {
+            width: 120px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            font-family: "Gothic A1", sans-serif;
+            font-size: 13px;
+            font-weight: bolder;
+            background-color: #a0c2f1e8;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+ 
+        &__btn:hover { 
+            background-color: #DEECFF;
+        }
+        
+        .message-sent {
+            font-family: "Gothic A1", sans-serif;
+            font-size: 13px;
+            margin: 5px;
+        }
+      }
+    }
+  }
+}
+

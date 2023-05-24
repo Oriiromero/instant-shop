@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gothic+A1:wght@300;400&display=swap");
-@media ((min-width: 1200px) and (max-width: 1600px)) {
+@media ((min-width: 900px) and (max-width: 1600px)) {
   .contact {
     width: 100%;
     height: 80vh;
@@ -90,7 +90,7 @@
     margin: 5px;
   }
 }
-@media ((min-width: 375px) and (max-width: 900px)) {
+@media ((max-width: 900px)) {
   .contact {
     width: 100%;
     height: 80vh;
@@ -154,5 +154,98 @@
   }
   .contact-main_form__btn:hover {
     background-color: #DEECFF;
+  }
+}
+@media ((min-width: 2400px) and (max-width: 3600px)) {
+  .contact {
+    width: 100%;
+    height: 60vh;
+  }
+  .contact-main {
+    margin: 216px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-main_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 170px;
+  }
+  .contact-main_info__title {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bolder;
+    margin: 10px 0;
+  }
+  .contact-main_info__text {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 15px;
+    width: 350px;
+    text-align: justify;
+    margin: 5px 0;
+  }
+  .contact-main_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 1px 1px 4px 1px rgb(203, 203, 203);
+    padding: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 0 170px;
+  }
+  .contact-main_form label {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+  .contact-main_form__input {
+    width: 350px;
+    height: 35px;
+    margin: 5px 0 20px 0;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 13px;
+    padding: 0 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(185, 185, 185);
+  }
+  .contact-main_form__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  .contact-main_form__textarea {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 13px;
+    width: 350px;
+    height: 100px;
+    margin: 5px 0 20px 0;
+    padding: 5px 5px;
+    border: 1px solid rgb(185, 185, 185);
+    resize: none;
+  }
+  .contact-main_form__input:focus, .contact-main_form__textarea:focus {
+    outline: none;
+  }
+  .contact-main_form__btn {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 13px;
+    font-weight: bolder;
+    background-color: rgba(160, 194, 241, 0.9098039216);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .contact-main_form__btn:hover {
+    background-color: #DEECFF;
+  }
+  .contact-main_form .message-sent {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 13px;
+    margin: 5px;
   }
 }/*# sourceMappingURL=contact.css.map */
