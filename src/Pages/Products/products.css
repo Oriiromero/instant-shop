@@ -2,7 +2,7 @@
 @media ((min-width: 900px) and (max-width: 1600px)) {
   .main-products {
     width: 100%;
-    height: 100%;
+    height: 79vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
