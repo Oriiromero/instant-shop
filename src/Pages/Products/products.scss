@@ -24,7 +24,7 @@ $breakpoints: (
 @include breakpoint(medium){
     .main-products {
         width: 100%;
-        height: 79vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
