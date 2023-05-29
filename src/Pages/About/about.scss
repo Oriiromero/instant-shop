@@ -2,6 +2,7 @@
 
 $breakpoints: (
     "small": "(min-width: 390px) and (max-width: 430px)",
+    "landscape": "(min-width: 430px) and (max-width: 800px)",
     "medium": "(min-width: 900px) and (max-width: 1600px)",
     "large": "(min-width: 2000px) and (max-width: 3600px)",
 );
@@ -79,6 +80,67 @@ $breakpoints: (
 }
 
 @include breakpoint(small) {
+    .about {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-main {
+            width: 390px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 0 45px 0;
+
+            &_title {
+                font-family: 'Allura', cursive;
+                font-size: 40px;
+                font-weight: lighter;
+                margin: 10px 0;
+            }
+
+            &_p {
+                width: 350px;
+                font-family: 'Gothic A1', sans-serif; 
+                text-align: center;
+                font-size: 15px;
+                margin: 10px 0 5px 0;
+            }
+
+            &_box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__title {
+                    font-family: 'Gothic A1', sans-serif;
+                    font-weight: bolder;
+                    font-size: 17px;
+                    margin: 10px 0 5px 0;
+                }
+
+                &__p {
+                    width: 300px;
+                    font-family: 'Gothic A1', sans-serif;
+                    font-size: 15px;
+                    text-align: justify;
+                    margin: 10px 0 5px 0;
+                }
+            }
+
+            &__p {
+                width: 250px;
+                font-family: 'Gothic A1', sans-serif;
+                font-style: italic;
+                font-size: 15px;
+                text-align: center;
+                margin: 20px 0 20px 0;
+            }
+        }
+    }
+}
+
+@include breakpoint(landscape) {
     .about {
         width: 100%;
         display: flex;

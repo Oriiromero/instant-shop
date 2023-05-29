@@ -2,6 +2,7 @@
 
 $breakpoints: (
     "small": "(min-width: 390px) and (max-width: 430px)",
+    "landscape": "(min-width: 430px) and (max-width: 800px)",
     "medium": "(min-width: 900px) and (max-width: 1600px)",
     "large": "(min-width: 2000px) and (max-width: 3600px)",
 );
@@ -152,6 +153,143 @@ $breakpoints: (
 }
 
 @include breakpoint(small) {
+  .product-page {
+    display: flex;
+    height: 80vh;
+    width: 96vw;
+    justify-content: center;
+    align-items: center;
+
+    &_back {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 110px;
+        left: 15px;
+        cursor: pointer;
+    }
+  }
+
+  .main-product {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    &_img {
+        width: 200px;
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_info {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-family: "Gothic A1", sans-serif;
+            margin: 0 10px;
+            font-size: 15px;
+        }
+
+        &-descr {
+            margin: 10px 10px;
+            font-family: "Gothic A1", sans-serif;
+            font-size: 11px;
+            text-align: justify;
+            color: rgb(66, 66, 66);
+        }
+
+        &-price {
+            margin: 10px 10px;
+            font-family: "Gothic A1", sans-serif;
+            font-size: 13px;
+            font-weight: bolder;
+            
+        }
+
+        &-amount {
+            width: 40px;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+            margin: 20px 10px;
+            font-size: 10px;
+            font-family: "Gothic A1", sans-serif;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        &-cart {
+            width: 100px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-family: "Gothic A1", sans-serif;
+            background-color: #DEECFF;
+            color: black;
+            font-weight: bolder;
+            margin: 15px 10px;
+            cursor: pointer;
+            font-size: 10px;
+            transition: 0.5s;
+        }
+
+        &-cart:hover{
+            background-color: #a5c6f6;
+            color: black;
+        }
+    }
+
+    .star-box{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        margin-left: 7px;
+        z-index: -1;
+
+        &-inner{
+            display: flex;
+            width: 40px;
+            height: 20px;
+            background-color: transparent;
+            background-color: #F7C04A;
+        }
+      
+        &-star {
+            width: 80px;
+            height: 20px;
+        }
+
+        .star-num {
+            font-family: "Gothic A1", sans-serif;
+            margin-top: 5px;
+            margin-right: 10px;
+            color: rgb(58, 170, 201);
+            font-size: 14px;
+        }
+
+        .random {
+            font-family: "Gothic A1", sans-serif;
+            font-size: 12px;
+            margin-left: 35px;
+            margin-top: 5px;
+            display: none
+        };
+    }
+  }
+}
+
+@include breakpoint(landscape) {
   .product-page {
     display: flex;
     height: 80vh;
