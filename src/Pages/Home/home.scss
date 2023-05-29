@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Gothic+A1:wght@300;400;500&display=swap');
 
 $breakpoints: (
-    "small": "(max-width: 900px)",
+    "small": "(min-width: 390px) and (max-width: 430px)",
     "medium": "(min-width: 900px) and (max-width: 1600px)",
     "large": "(min-width: 2000px) and (max-width: 3600px)",
 );
