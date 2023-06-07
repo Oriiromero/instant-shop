@@ -4,7 +4,7 @@ $breakpoints: (
   "small": "(min-width: 150px) and (max-width: 430px)",
   "landscape": "(min-width: 430px) and (max-width: 900px)",
   "medium": "(min-width: 900px) and (max-width: 1999px)",
-  "large": "(min-width: 2000px) and (max-width: 3600px)",
+  "large": "(min-width: 2000px) and (max-width: 4600px)",
 );
 
 @mixin breakpoint($user-value) {
